@@ -1,12 +1,13 @@
 import "./App.css";
-import Header from "./header";
 import Navbar from "./navbar";
+import RichiesteLog from "./richieste-log";
 function App() {
   return (
     <>
-      <div className="continer mx-auto w-full h-full max-w-[1386px]">
+      <div className="w-full h-full">
         <Navbar />
-        <Header />
+        <hr className='border-[#EDEDED] border-solid  w-full'></hr>
+        <RichiesteLog/>
       </div>
     </>
   );
