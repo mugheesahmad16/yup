@@ -8,29 +8,36 @@ export default function AsideBar() {
     setSelectCard(index);
   };
   return (
-    <div className="flex flex-col  py-10 pr-5">
-      <div className="flex flex-row justify-between items-center">
-        <div className="flex flex-col gap-2">
+    <div className="flex flex-col pt-10 pb-5 sm:py-10 px-4 sm:pr-5">
+      <div className="flex flex-row justify-between items-center w-full">
+        <div className="flex flex-row w-full justify-between  sm:flex sm:flex-col gap-2">
           <h1 className="text-[26px] font-bold leading-5 font-Poppins tracking-[0px] text-[#29235C]">
             Luna Rossa
           </h1>
-          <p className="text-[12px] text-black opacity-[60%] ">
+          <Button
+                className="rounded-2xl block sm:hidden  h-7 text-white font-light text-[12px] text-white bg-[#E72687] border-none"
+                variant="outline"
+                size="sm"
+              >
+                Vedi richiesta
+              </Button>
+          <p className="text-[12px] text-black opacity-[60%] hidden invisible sm:visible ">
             Via De Gasperi,23 Salerno
           </p>
           <Button
             variant="destructive"
-            className="h-6 hover:bg-[#E72687] text-[#29235C] hover:text-white hover:border-white rounded-full cursor-pointer w-15 border border-black border-[1px] bg-gray-200 text-[#29235C] py-[-1px] text-[12px] mt-2"
+            className="h-6 hidden invisible sm:visible hover:bg-[#E72687] text-[#29235C] hover:text-white hover:border-white rounded-full cursor-pointer w-15 border border-black border-[1px] bg-gray-200 text-[#29235C] py-[-1px] text-[12px] mt-2"
           >
             Horeca
           </Button>
         </div>
-        <div className="flex flex-col gap-2 items-center cursor-pointer">
+        <div className="flex sm:flex flex-col gap-2 justify-center items-center cursor-pointer hidden sm:flex">
           <img src="/images/eye.svg"></img>
           <p className="text-[12px] text-[#E72687]">Anteprima</p>
         </div>
       </div>
       {/* Request card */}
-      <div className="my-8 flex flex-col gap-5">
+      <div className="my-8 flex md:flex flex-col gap-5 hidden md:block ">
         {Cards.map((card, index) => (
           <RequestCard
             key={index}

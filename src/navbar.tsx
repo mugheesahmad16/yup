@@ -2,9 +2,11 @@ import Menu from "./components/ui/menu";
 
 export default function Navbar() {
   return (
-    <div className="max-w-[1240px] mx-auto w-full h-[100px] grid grid-cols-7 sm:grid-cols-13 items-center justify-between sm:flex-row bg-white">
+    <div className="max-w-[1240px] px-4 hidden sm:block sm:grid mx-auto w-full h-[100px] grid grid-cols-7 sm:grid-cols-13 items-center justify-between sm:flex-row bg-white">
       <div className="flex col-span-3 sm:col-span-4 justify-start items-center">
+       <a href="#">
         <img src="images/logo.svg" className="sm:max-w-[120px] max-w-[80px]" alt="logo"></img>
+        </a>
       </div>
       {/* menu bar */}
       <div className="flex sm:col-span-6 justify-center items-center">
